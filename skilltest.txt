@@ -59,9 +59,46 @@ A: It creates a new commit containing a copy of C with the HEAD of the current b
 
 
 
+Q: While in detached HEAD, you commit a new file. How would you keep that file in your history and prevent Git from garbage-collecting it?
+A: Create a branch or a tag on the current commit.
+
+
+
+Q: You are working on the main branch in your repository that contains a file called app.js. You create a branch called experiments where you run experimental changes to app.js. After a while, you want to bring the changes made to app.js into your main branch, so you run the following command:
+git switch main
+git restore --source experiments -- app.js
+What would be the outcome?
+
+A: This will check out the latest changes of that file on the <experiments> branch onto your <main> branch.
+
+
+
+Q: The command <git status> lists the same file twice, once as "Modified" and once as "Deleted." Which scenario caused this result?
+A: The file was modified, added to the index, and then deleted.
+
+
+
+Q: How do you create the first commit in a project?
+A: Stage the relevant files and directories and then use <git commit>.
+
+
+
+Q: You create a new branch using the <git branch mybranch> command, but you do not check it out. What occurs when you next commit?
+A: Git creates a new commit, but mybranch stays on the previous commit.
+
+
+
+Q: What occurs when you execute the command <git blame README.md>?
+A: You will see each line in the file and information about the last change made to that line.
+
+
+
+Q: You tag the current commit and you then change the current branch, which forces it to point at the previous commit. What is the outcome?
+A: The tagged commit is not garbage collected because there is a tag pointing at it.
+
+
+
 Q: 
-
-
 
 
 
