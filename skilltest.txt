@@ -98,8 +98,37 @@ A: The tagged commit is not garbage collected because there is a tag pointing at
 
 
 
-Q: 
+Q: You are working on a project with developers all around the country, using git as your version control system. After working in the repository for a while you notice that some commits have become detached from the project history and are unnecessarily kept in memory, as they are not relevant anymore. How can you clean these commits from memory?
+A: By running <git gc> to trigger Git's garbage collection.
 
+
+
+Q: After writing the command <git checkout {branch-name}> numerous times, you want to abbreviate the name of the command. You run the command <git config --global alias.co checkout> and expect an alias to be set. What happens if you then type <git co {branch-name}>?
+A: The checkout command happens as expected; the alias was set successfully.
+
+
+
+Q: How do you benefit from using <git add -i> instead of <git add .>?
+A: You can select specific files and easily update, patch, or revert them.
+
+
+
+Q: You are not currently on any branch and you create a commit. What is the outcome?
+A: The HEAD pointer moves to the new commit.
+
+
+
+Q: You are working on the main branch. HEAD in main and HEAD in the branch <branch1> point to the same commit. What would be the consequences to the placement of the HEAD pointer if you rename <branch1> to <branch2>?
+A: HEAD would still be the same in main and in branch2.
+
+
+
+Q: What is the difference between <git branch -d your_branch> and <git branch -D your_branch>?
+A: The -d flag deletes the local branch only if it has been merged with the remote branch, while the -D flag forces the deletion of the local branch without checking its remote state.
+
+
+Q: What is the difference between <git branch -m> and <git branch -M>?
+A: <git branch -m> will rename a branch and the corresponding reflog, whereas <git branch -M> will force the renaming of the branch, even if a branch with the new name already exists.
 
 
 
