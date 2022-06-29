@@ -49,7 +49,17 @@ A: --index-filter
 
 
 
-Q: You want to remove some untracked files from your working directory and to discard your latest changes. You run the git reset --hard HEAD command. The latest changes to the tracked files are missing, but the untracked files still remain. Which command would you use to fix this?
+Q: You want to remove some untracked files from your working directory and to discard your latest changes. You run the <git reset --hard HEAD> command. The latest changes to the tracked files are missing, but the untracked files still remain. Which command would you use to fix this?
+A: git clean --force
+
+
+
+Q: How does <git cherry-pick> add a commit named C to the current branch?
+A: It creates a new commit containing a copy of C with the HEAD of the current branch as a parent.
+
+
+
+Q: 
 
 
 
