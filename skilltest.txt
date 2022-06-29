@@ -1,0 +1,68 @@
+Q: Which problem does configuring core.excludesfile solve?
+A: It lists all objects that are not meant to be tracked by Git with a reference file
+
+
+
+Q: After resolving a merge conflict, you want the merge commit to include a default message that Git generates. How would you finalize the merge?
+A: Use <git commit> and, when Git opens a text editor, accept the default message.
+
+
+
+Q: What command can move your working directory to an earlier commit?
+A: git checkout <commit_hash_here>
+
+
+
+Q: When performing a revert on a single commit you encounter the following error:
+Error: your local changes would be overwritten by revert. 
+Which command would allow you to proceed with the revert process after committing your local changes? 
+
+A: git revert --continue
+
+
+
+Q: Which command creates an annotated tag named <mytag> on the current commit?
+A: git tag -a mytag
+
+
+
+Q: You are working on an application used by your company for internal communications and knowledge management. Your application's current version is v1.3, and your team then pushes their latest changes into the master branch for the new release. How can you label the new release of the project according to the version sequence used in the project and following Git's best practices?
+A: git tag -a v1.4
+
+
+
+Q: What happens when you tag the current branch and then rename it?
+A: The tag remains active because it points to a particular commit, not the branch itself.
+
+
+
+Q: You create a tag mytag and link it to your current branch. You then check out the tag using <git checkout mytag>. What does HEAD point to as a result?
+A: The same commit as <mytag>
+
+
+
+Q: You want to remove a specific file from your repository history so you run the following command:
+git filter-branch --tree-filter
+After a while, the command is running very slowly, Which filter could you use instead for quicker results?
+
+A: --index-filter
+
+
+
+Q: You want to remove some untracked files from your working directory and to discard your latest changes. You run the git reset --hard HEAD command. The latest changes to the tracked files are missing, but the untracked files still remain. Which command would you use to fix this?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
