@@ -144,8 +144,6 @@ A: To rename or move a branch and the corresponding reflog
 
 
 Q: In your company lexicon, the principal branch used in version control systems has always been called principal. After the recent adoption of Git, however, the principal branch in Git is called main instead. How would you ensure that your company implementation of Git complies with its legacy terms? 
-
-
 A: Rename the <main> branch <principal>.
 
 
@@ -165,13 +163,18 @@ A: git rm file2.txt
 
 
 
-What is the difference between comparing two branches with git diff or git difftool?
-git diff uses the command-line diff command, while git difftool uses the external diff tool that you configured.
+Q: What is the difference between comparing two branches with git diff or git difftool?
+A: git diff uses the command-line diff command, while git difftool uses the external diff tool that you configured.
 
 
 
-How would you update file1.txt to move it from the staging area back to the working directory?
-git reset file1.txt
+Q: How would you update file1.txt to move it from the staging area back to the working directory?
+A: git reset file1.txt
+
+
+
+Q:
+A:
 
 
 
