@@ -127,16 +127,51 @@ Q: What is the difference between <git branch -d your_branch> and <git branch -D
 A: The -d flag deletes the local branch only if it has been merged with the remote branch, while the -D flag forces the deletion of the local branch without checking its remote state.
 
 
+
 Q: What is the difference between <git branch -m> and <git branch -M>?
 A: <git branch -m> will rename a branch and the corresponding reflog, whereas <git branch -M> will force the renaming of the branch, even if a branch with the new name already exists.
 
 
 
+Q: Which statement best describes git reset's hard and mixed flags?
+A: <hard> will reset all changes in the staging area and working directory. <mixed> will only reset the staging area.
 
 
 
+Q: What is the purpose of the command git branch -m?
+A: To rename or move a branch and the corresponding reflog
 
 
+
+Q: In your company lexicon, the principal branch used in version control systems has always been called principal. After the recent adoption of Git, however, the principal branch in Git is called main instead. How would you ensure that your company implementation of Git complies with its legacy terms? 
+
+
+A: Rename the <main> branch <principal>.
+
+
+
+Q: Why does Git garbage collect objects?
+A: To avoid storing unnecessary information or sending it over the network
+
+
+
+Q: Which statement is the best comparison between <git grep> and <grep>?
+A: <git grep> will only search through tracked files, while <grep> will search all files.
+
+
+
+Q: What command would you use to remove file2.txt from the working tree as well as the index and then stage the deletion to the index?
+A: git rm file2.txt
+
+
+
+What is the difference between comparing two branches with git diff or git difftool?
+git diff uses the command-line diff command, while git difftool uses the external diff tool that you configured.
+
+
+
+How would you update file1.txt to move it from the staging area back to the working directory?
+git reset file1.txt
 
 
 
