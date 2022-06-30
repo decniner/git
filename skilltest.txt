@@ -173,8 +173,87 @@ A: git reset file1.txt
 
 
 
-Q:
-A:
+Q: Which statement is the best comparison between git grep and grep?
+A: git grep will only search through tracked files, while grep will search all files.
+
+
+
+Q: The sole difference between branches b1 and b2 is that b2 contains a file that b1 does not. When you merge branch b1 into b2, it results in a conflict. What is the most likely explanation?
+A: The file was modified on b2 and deleted from b1.
+
+
+
+You are working on a project that has two key branches : main and dev . You perform all work on dev and once there is a release, you plan to push the code from dev to main expecting a fast-forward merge commit every time. Why is this an unreasonable expectation?
+The merge commit will not be a fast-forward commit every time, because the HEAD of dev is not always a direct descendant of the HEAD on main.
+
+
+
+What does the git remote command do?
+Allows you to create, view, and delete connections to other repositories
+
+
+
+You merge your branch into master, but it breaks some application features. How can you quickly find the commits that introduced the bugs?
+By using the git bisect command and specifying a good commit and a bad commit to perform a binary search for the faulty commits
+
+
+
+You are on branch main that points to the same commit as branch1. A colleague in the same project accidentally deletes branch1 and now it needs you to restore it. How would you recover branch1?
+You can create it again because you are on the same commit.
+
+
+
+You are working on the main branch. HEAD in main and HEAD in the branch branch1 point to the same commit. What would be the consequences to the placement of the HEAD pointer if you rename branch1 to branch2?
+HEAD would still be the same in main and in branch2.
+
+
+
+How does rebasing affect the history of a repository?
+Rebasing can modify, delete, or even create a new history.
+
+
+
+A branch rebase procedure is interrupted because of a conflict in one of the rebased commits. How would you skip that specific commit to continue the rebase? 
+git rebase --skip
+
+
+
+Which command cannot result in a conflict?
+git fetch
+
+
+
+What could happen if you check out the head pointer to a previous commit? 
+HEAD could be in a "detached" state.
+
+
+
+Where is the object database located in a Git repository?
+In the .git/objects folder
+
+
+
+You tag the current commit and you then change the current branch, which forces it to point at the previous commit. What is the outcome?
+The tagged commit is not garbage collected because there is a tag pointing at it.
+
+
+
+Which distribution model is most common in small-to-moderate sized open source projects?
+Pull request model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
