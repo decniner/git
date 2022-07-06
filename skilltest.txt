@@ -243,6 +243,96 @@ Pull request model
 
 
 
+How would you force Git to trigger garbage collection?
+With git gc
+
+
+
+You create a tag mytag and link it to your current branch. You then check out the tag using git checkout mytag. What does HEAD point to as a result?
+The same commit as mytag
+
+
+
+Why is the reflog considered a safety net?
+It maintains references to the old state of objects even if they are not connected to a branch.
+
+
+
+You merge your branch into master, but it breaks some application features. How can you quickly find the commits that introduced the bugs?
+By using the git bisect command and specifying a good commit and a bad commit to perform a binary search for the faulty commits
+
+
+
+After resolving a merge conflict, you want the merge commit to include a default message that Git generates. How would you finalize the merge?
+Use git commit and, when Git opens a text editor, accept the default message.
+
+
+
+Which git log command will produce the following output?
+git log --oneline
+
+
+
+How are references removed from the reflog other than through the 90 day limit?
+A triggered garbage collection process may clean up an abandoned object.
+
+
+
+How would you remove a file with sensitive information throughout the history of the repository?
+git filter-branch
+
+
+
+How would you display commit a7855c91ed8c58 (tag: v1.3.1)?
+git show a7855 or git show v1.3.1
+
+
+
+What occurs when you execute the command git blame README.md?
+You will see each line in the file and information about the last change made to that line.
+
+
+
+You tag the current commit and you then change the current branch, which forces it to point at the previous commit. What is the outcome?
+The tagged commit is not garbage collected because there is a tag pointing at it.
+
+
+
+A developer on your team commits their latest changes and immediately pushes them to the repository. However, they included in their commits a file with sensitive authentication information. How could they have avoided this situation?
+By running git status before committing and ensuring that all the staged files are safe to be committed.
+
+
+
+What will happen to the staged file1.txt when you run the command git reset?
+The staging area will be cleared, but the changes will still exist in the working directory.
+
+
+
+You want to remove a specific file from your repository history so you run the following command:
+--index-filter
+
+
+
+You are setting up a new project. Which files should you store in the version control system?
+The minimum files necessary to rebuild the state of the project at a given point in time
+
+
+
+What command would you use to test pushing the feature/test branch to a remote origin?
+git push --dry-run origin feature/test
+
+
+
+You are working on an application used by your company for internal communications and knowledge management. Your application's current version is v1.3, and your team then pushes their latest changes into the master branch for the new release. How can you label the new release of the project according to the version sequence used in the project and following Git's best practices?
+git tag -a v1.4
+
+
+
+Which problem does configuring core.excludesfile solve?
+It lists all objects that are not meant to be tracked by Git with a reference file
+
+
+
 
 
 
